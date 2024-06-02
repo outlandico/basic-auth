@@ -1,10 +1,16 @@
 const express = require('express');
+const cors = require('cors'); // Import the CORS middleware
 const app = express();
 const signupRoute = require('./src/auth/routes-handlers/signupRoute');
-const signinRoute = require('./src/auth/routes-handlers/signinRoute'); // Import the sign-in route handler
+const signinRoute = require('./src/auth/routes-handlers/signinRoute');
+const path = require('path');
+
+// Enable CORS for all origins
+app.use(cors());
 
 // Middleware
 app.use(express.json());
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
 app.use('/api/auth', signupRoute); // Mount the signup route
