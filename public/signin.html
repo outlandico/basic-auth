@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Signin Form</title>
 </head>
+
 <body>
   <h1>Signin</h1>
   <form id="signin-form">
@@ -12,7 +14,7 @@
     <input type="text" id="username" name="username" required>
     <br>
     <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required>
+    <input type="password" id="password" name="password" autocomplete="current-password" required>
     <br>
     <button type="submit">Signin</button>
   </form>
@@ -46,4 +48,5 @@
     });
   </script>
 </body>
+
 </html>
